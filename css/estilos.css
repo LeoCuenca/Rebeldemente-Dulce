@@ -1,0 +1,622 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  background-color: black;
+  font-family: Dulcelin;
+  user-select: none;
+}
+
+p{
+  text-align: justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0.1rem 0.1rem 0.1 rgb(61, 60, 60);
+  color: white;
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.3rem;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DEL HEADER                         
+-----------------------------------------------------------------------------------
+*/
+
+nav{
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+}
+
+a:hover{
+  color: #d079fc;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+  font-weight: bold;
+}
+
+.boton{
+  width: 25%;
+  min-width: 10rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.1rem grey;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Dulcelin;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  background-color: #530d77;
+  border: 0.15rem solid #d079fc;
+  box-shadow: 0rem 0rem 1rem #d079fc;
+  text-decoration: none;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILO DE LA PAGINA INICIO                        
+-----------------------------------------------------------------------------------
+*/
+
+.logo{
+  background-image: url("/img/Fondo-Escarcha-3.jpg");
+  opacity: none;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  opacity: 95%;
+}
+
+.logo img{
+  width: 28rem;
+  height: 28rem;
+}
+
+.index{
+  animation-duration: 2s;
+  animation-name: deslizado_vertical;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DEL TITULO                        
+-----------------------------------------------------------------------------------
+*/
+
+.title{
+  color:white;
+  font-family: Audiowide;
+  text-align: center;
+  font-weight: bold;
+  height: fit-content;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.title_description{
+  display: inline-block;
+  position: relative;
+}
+
+.title .title_description::before, .title .title_description::after{
+  content: '';
+  position: absolute;
+  width: 6rem;
+  height: 0.3rem;
+  background-color: currentColor;
+  top: 1.5rem;
+}
+
+.title .title_description::before{
+  left: -8rem;
+}
+
+.title .title_description::after{
+  right: -8rem;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA NOSOTROS                         
+-----------------------------------------------------------------------------------
+*/
+
+.presentacion{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo_chico{
+  height: 12rem;
+  width: 12rem;
+  margin: 0.5rem 3rem 0rem;
+}
+
+.sobre_nosotros{
+  display: flex;
+  flex-direction: row;
+  background-color: #d079fcc7;
+  box-shadow: 0rem 0rem 2rem #d079fc;
+  border-radius: 5rem;
+  margin: 2rem 3rem;
+  padding: 0.3rem 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+}
+
+.subtitulo{
+  margin-left: 2rem;
+  font-size: 3.5rem;
+}
+
+.sobre_nosotros p{
+  text-indent: 3rem;
+  text-align: justify;
+  margin: 0rem 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #530d77;
+}
+
+.mision_vision p{
+  text-indent: 3rem;
+  text-align: justify;
+  margin: 1rem 4rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+}
+
+.imagen{
+  height: 25rem;
+  width: 27rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 3rem;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA PRODUCTOS                        
+-----------------------------------------------------------------------------------
+*/
+
+.container{
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: center;
+}
+
+.box{
+  height: 40rem;
+  width: 23rem;
+  margin: 0rem 3rem 4rem;
+  padding: 1.2rem;
+  box-shadow: 0rem 0rem 2rem #d079fc;
+  background-color: #d079fcc7;
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.card_name{
+  font-family: Dulcelin;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
+  color: #530d77;
+}
+
+.box p{
+  text-shadow: 0.2rem 0.1rem 0.3rem #000;
+  font-size: 1.2rem;
+  width: 15rem;
+  text-align: center;
+}
+
+.card{
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  display: flex;
+  margin-left: 0.30rem;
+  margin-top: 1rem;
+}
+
+.card .face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: .5s;
+  
+}
+
+.card .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0rem 0.5rem 1rem #000;
+}
+
+.card .front img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.card .back img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 90%;
+}
+
+.card .back{
+  transform: perspective(600px) rotateY(180deg);
+  box-shadow: 0 5px 10px black;
+}
+
+.card:hover .front{
+  transform: perspective(600px) rotatey(180deg);
+}
+
+.card:hover .back{
+  transform: perspective(600px) rotatey(360deg);
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA CONTACTANOS                         
+-----------------------------------------------------------------------------------
+*/
+
+.contactanos_mapa {
+  text-align: center;
+  justify-content: center;
+  color: #d079fc;
+  padding: 1rem;
+}
+
+.mapa_texto {
+  margin: 1rem;
+}
+
+p.mapa_texto {
+  margin: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+}
+
+.formulario_container, form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 0px;
+  padding: 0.5rem;
+  color: #d079fc;
+}
+
+.form_grupo {
+  padding: 0.5rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+.form_title {
+  display: block;
+  padding: 1rem;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+}
+
+.form_input {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera: sin flechas si es número */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.opcionesRegalo .opcionesEvento .opcionesProducto .opcionesComentario {
+  display: none;
+}
+
+.form_input_incorrecto {
+  border: 0.5rem solid red;
+  border-radius: 2rem;
+}
+
+.form_input_correcto {
+  border: 0.5rem solid green;
+  border-radius: 2rem;
+}
+
+.form_input_neutro {
+  border: 0.5rem solid transparent;
+  border-radius: 2rem;
+}
+
+.form_btn {
+  font-family: Dulcelin;
+  cursor: pointer;
+  width: 40%;
+  padding: 0rem;
+  margin-bottom: 5rem;
+}
+
+/* #grupo_mensajeProducto */
+#grupo_mensajeRegalo, #grupo_mensajeComentario, #grupo_datosEvento, .form_grupo_btn {
+  grid-column: 1 / -1;
+}
+
+.form_grupo_btn {
+  align-self: center;
+  align-items: center;
+  height: 80%;
+}
+
+textarea {
+  width: 100%;
+  overflow-y: auto;
+  border-radius: 1.5rem;
+  padding: 0.75rem;
+}
+
+.contactanos_mapa>iframe {
+  width: 80%;
+  height: 23rem;
+  border-radius: 0.8rem;
+  box-shadow: 0rem 0rem 3rem #d079fc;
+}
+
+a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+.alert_popup {
+  border: 0.45rem double #d079fc !important;
+}
+
+/* Boton de Whatsapp */
+.boton_whatsapp {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.boton_whatsapp>img {
+  width: 5rem;
+}
+
+.boton_whatsapp:hover {
+  opacity: 0.7;
+  }
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DEL FOOTER                         
+-----------------------------------------------------------------------------------
+*/
+
+footer{
+  font-family: Audiowide;
+  color: white;
+  height: fit-content;
+  margin: 0.01rem;
+  padding: 0.01rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer>div{
+  margin: 0.02rem;
+  padding: 0.02rem;
+}
+
+footer>div>p{
+font-size: 1rem;
+margin-right: 6rem;
+}
+
+.frase{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #530d77;
+  font-weight: lighter;
+  font-family: Dulcelin;
+  margin-right: 8rem;
+}
+
+.dos{
+  margin: 1rem;
+}
+
+.pie-pagina{
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.enlace{
+  color: #530d77;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
+  font-size: 2.5rem;
+  margin: 0.1rem;
+  padding: 0rem 1.5rem 0rem;
+  text-decoration: none;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ANIMACIONES                        
+-----------------------------------------------------------------------------------
+*/
+
+@keyframes deslizado_vertical {
+    from {
+      margin-top: 100%;
+      height: 100%
+    }
+  
+    to {
+      margin-top: 0%;
+      height: 100%;
+    }
+
+    75% {
+        font-size: 200%;
+        margin-top: 25%;
+        height: 150%;
+      }
+  }
+
+/* 
+-----------------------------------------------------------------------------------
+                            FUENTES                         
+-----------------------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family:Dulcelin;
+  src: url(/fuentes/Dulcelin.otf);
+}
+
+@font-face {
+  font-family:Audiowide;
+  src: url(/fuentes/Audiowide.ttf);
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            MEDIA QUERIES                        
+-----------------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 425px) {
+    html{
+      font-size: 8px;
+    }
+
+    .logo img{
+      width: 40rem;
+      height: 40rem;
+    }
+
+    .logo{
+      height: 65rem;
+      align-items: center;
+    }
+
+    .titulo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .presentacion{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sobre_nosotros{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+
+    footer{
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .formulario_container, form {
+      grid-template-columns: 1fr;
+    }
+  }
+
+@media screen and (min-width: 425px) and (max-width: 992px){
+ 
+  html{
+    font-size: 10px;
+  }
+
+  footer{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentacion{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formulario_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px){ 
+  html{
+    font-size: 12px;
+  }
+
+  .formulario_container, form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+ 
+  html{
+    font-size: 16px;
+  }
+
+  .container{
+    justify-content: space-evenly;
+  }
+  
+  .formulario_container, form {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Contactanos-Rebeldemente Dulce</title>
+    <link rel="Icon" href="img/Rebeldemente-Dulce-Favicon.ico">
+    <script src="https://kit.fontawesome.com/89ca3f5f54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="idheader">
+    </header>
+
+    <main>
+        <div class="title">
+            <h1 class="title_description">Contactanos</h1>
+        </div>
+        <div class="formulario_container">
+            <form action="" id="formulario">
+                <!-- <legend>Personalia:</legend> -->
+                <div class="form_grupo" id="grupo_nombre">
+                    <label for="nombre" class="form_title">Nombre:</label>
+                    <input type="text" class="form_input form_input_neutro" id="nombre" name="nombre" placeholder="Inodoro Pereyra"><br><br>
+                </div>
+
+                <div class="form_grupo" id="grupo_celular">
+                    <label for="celular" class="form_title">Celular:</label>
+                    <input type="number" class="form_input form_input_neutro" id="celular" name="celular" placeholder="11 12345678"><br><br>
+                </div>
+                
+                <div class="form_grupo" id="grupo_mail">
+                    <label for="mail" class="form_title">Mail:</label>
+                    <input type="text" class="form_input form_input_neutro" id="mail" name="mail"><br><br>
+                </div>
+                
+                <div class="form_grupo" id="grupo_asunto">
+                    <label for="asunto" class="form_title">¿Qué estás buscando?:</label>
+                    <select class="form_input form_input_neutro" name="asunto" id="asunto" onchange="mostrarOpcionesForm(), corregirFechasPermitidas()">
+                        <option disabled selected value> -- Elija una opción -- </option>
+                        <option value="regalo">Box de regalo</option>
+                        <option value="eventos">Eventos</option>
+                        <option value="productos">Productos individuales</option>
+                        <option value="comentarios">Comentarios</option>
+                    </select>
+                </div>
+                
+                                    
+                <!-- Box de regalo. Opciones -->
+                <div class="form_grupo opcionesRegalo" id="grupo_motivoRegalo">
+                    <label for="motivoRegalo" class="form_title">¿Algún motivo en especial?:</label>
+                    <input type="text" class="form_input form_input_neutro" id="motivoRegalo" name="motivoRegalo"><br><br>
+                </div>
+                <div class="form_grupo opcionesRegalo" id="grupo_fechaRegalo">
+                    <label for="fechaRegalo" class="form_title">Fecha de entrega:</label>
+                    <input type="date" class="form_input form_input_neutro" id="fechaRegalo" name="fechaRegalo"><br><br>
+                </div>
+                <div class="form_grupo opcionesRegalo" id="grupo_mensajeRegalo">
+                    <label for="mensajeRegalo" class="form_title">Mensaje (opcional):</label>
+                    <input type="text" class="form_input form_input_neutro" id="mensajeRegalo" name="mensajeRegalo" placeholder="Podés dejarle un mensaje"><br><br>
+                </div>
+
+                <!-- Eventos. Opciones -->
+                <div class="form_grupo opcionesEvento" id="grupo_fechaEvento">
+                    <label for="fechaEvento" class="form_title">Fecha del evento:</label>
+                    <input type="date" class="form_input form_input_neutro" id="fechaEvento" name="fechaEvento"><br><br>
+                </div>
+                <div class="form_grupo opcionesEvento" id="grupo_personasEvento">
+                    <label for="personasEvento" class="form_title">Invitados estimados:</label>
+                    <input type="number" class="form_input form_input_neutro" id="personasEvento" name="personasEvento" min="1" pattern="^[0-9]+"><br><br> 
+                </div>
+                <div class="form_grupo opcionesEvento" id="grupo_datosEvento">
+                    <label for="datosEvento" class="form_title">¿Querés contarnos algo más?:</label>
+                    <textarea class="form_input form_input_neutro" id="datosEvento" name="datosEvento" rows="4" placeholder="Contanos algo sobre tu evento: el lugar del evento, la temática, alguna restricciones de los invitados, etc..."></textarea>
+                </div>
+
+                <!-- Productos individuales. Opciones -->
+                <div class="form_grupo opcionesProducto" id="grupo_listaProducto">
+                    <label for="producto_individual" class="form_title">¿Qué producto te interesa?:</label>
+                    <select class="form_input form_input_neutro" name="producto_individual" id="producto_individual">
+                        <option disabled selected value> -- Elija una opción -- </option>
+                        <option value="budin_banana">Budín de Banana</option>
+                        <option value="cheesecake">Cheesecake</option>
+                        <option value="pavlova">Pavlova</option>
+                        <option value="pie_limon">Pie de Limón</option>
+                        <option value="profiteroles">Profiteroles</option>
+                        <option value="red_velvet">Red Velvet</option>
+                        <option value="tarta_frutas">Tarta de Frutas</option>
+                        <option value="torta_ricota">Torta de Ricota</option>
+                        <option value="rosca_reyes">Rosca de Reyes</option>
+                        <option value="otro">Otro producto</option>
+                    </select>
+                </div>
+                <div class="form_grupo opcionesProducto" id="grupo_mensajeProducto">
+                    <label for="mensajeProducto" class="form_title">¿Querés contarnos algo más?:</label>
+                    <textarea class="form_input form_input_neutro" id="mensajeProducto" name="mensajeProducto" rows="4" placeholder="¿Ya pudiste disfrutar de nuestro producto?"></textarea>
+                </div>
+
+                <!-- Comentarios. Opciones -->
+                <div class="form_grupo opcionesComentario" id="grupo_mensajeComentario">
+                    <textarea class="form_input form_input_neutro" id="mensajeComentario" name="mensajeComentario" rows="4" placeholder="Dejanos tu comentario"></textarea>
+                </div>
+
+                <div class="form_grupo form_grupo_btn">
+                    <button type="submit" class="boton form_btn">Enviar</button>
+                </div>
+            </form>
+
+            <div class="contactanos_mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.596410513589!2d-58.42995978477687!3d-34.58907728046327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb587c5b5f087%3A0x4e57999e89ac0040!2sEl%20Salvador%204752%2C%20C1414BPL%20CABA!5e0!3m2!1ses-419!2sar!4v1666741622632!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h4 class="frase dos">También podés visitarnos en nuestro local.</h4>
+                <p class="mapa_texto"><b>Teléfono: </b>(+54911) 5949-6795</p>
+                <p class="mapa_texto"><b>Correo: </b><a href="mailto:rebeldementedulce@gmail.com" target="_blank" rel="noopener noreferrer">rebeldementedulce@gmail.com</a></p>
+                <p class="mapa_texto"><b>Dirección: </b>El Salvador 4752 CABA</p>
+            </div>
+        </div>
+
+        <div id="boton_whatsapp">
+        </div>      
+    </main>
+
+    <footer id="idfooter">
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
+
+
+
